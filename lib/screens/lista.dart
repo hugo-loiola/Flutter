@@ -2,17 +2,19 @@ import "package:flutter/material.dart";
 export 'lista.dart';
 
 class Lista extends StatelessWidget {
+  const Lista({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Bússola'),
+        title: const Text('Bússola'),
         actions: [
-          IconButton(icon: Icon(Icons.exit_to_app), onPressed: () => {}),
+          IconButton(icon: const Icon(Icons.exit_to_app), onPressed: () => {}),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () => {},
       ),
       body: ListView.builder(
@@ -20,7 +22,7 @@ class Lista extends StatelessWidget {
         itemBuilder: (ctx, index) {
           return ListTile(
             title: Text('Lugar ${index + 1}'),
-            trailing: Text('Pipipopo'),
+            trailing: const Text('Pipipopo'),
           );
         },
       ),

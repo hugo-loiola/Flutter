@@ -3,26 +3,42 @@ import 'package:flutter/material.dart';
 export 'login.dart';
 
 class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Icon(Icons.compass_calibration_rounded, size: 72, color: Colors.blue),
-        Text('Bússola', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-        TextField(
-          keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration(border: UnderlineInputBorder(), label: Text('Email')),
+        const Icon(Icons.compass_calibration_rounded,
+            size: 72, color: Colors.blue),
+        const Text('Bússola',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        const Padding(
+          padding: EdgeInsets.all(16),
+          child: TextField(
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+                border: UnderlineInputBorder(), label: Text("Email")),
+          ),
         ),
-        TextField(
-          obscureText: true,
-          decoration: InputDecoration(border: UnderlineInputBorder(), label: Text('Senha')),
+        const Padding(
+          padding: EdgeInsets.all(16),
+          child: TextField(
+            keyboardType: TextInputType.text,
+            obscureText: true,
+            decoration: InputDecoration(
+                border: UnderlineInputBorder(), label: Text("Senha")),
+          ),
         ),
         Padding(
-            padding: EdgeInsets.only(top: 24),
+            padding: const EdgeInsets.only(top: 25),
             child: ElevatedButton(
-              child: Text('Entrar'),
+              child: const Text('Entrar'),
               onPressed: () => {},
-              style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20), textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+              style: ElevatedButton.styleFrom(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                  textStyle: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold)),
             ))
       ]),
     );

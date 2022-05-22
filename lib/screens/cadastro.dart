@@ -2,16 +2,19 @@ import "package:flutter/material.dart";
 export 'cadastro.dart';
 
 class Cadastro extends StatelessWidget {
+  const Cadastro({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: Icon(Icons.arrow_back), onPressed: () => {}),
-        title: Text('Novo Cadastro'),
+        leading:
+            IconButton(icon: const Icon(Icons.arrow_back), onPressed: () => {}),
+        title: const Text('Novo Cadastro'),
         actions: [
           TextButton(
               onPressed: () => {},
-              child: Text(
+              child: const Text(
                 'Salvar',
                 style: TextStyle(color: Colors.white),
               ))
@@ -19,7 +22,7 @@ class Cadastro extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           TextField(
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
