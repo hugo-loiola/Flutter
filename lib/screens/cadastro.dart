@@ -9,7 +9,7 @@ class Cadastro extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.indigo,
         title: const Text('Novo Cadastro'),
         actions: [
           TextButton(

@@ -4,11 +4,11 @@ export 'lista.dart';
 class Lista extends StatelessWidget {
   Lista({Key? key}) : super(key: key);
 
-  final List dummyList = List.generate(100, (index) {
+  final List lista = List.generate(100, (index) {
     return {
       "id": index,
-      "title": "Esse é o título $index",
-      "subtitle": "esse é o subtítulo $index"
+      "title": "Lugar de número: $index",
+      "subtitle": "Esse lugar blablabla $index"
     };
   });
 
@@ -28,7 +28,7 @@ class Lista extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add, color: Colors.white),
         backgroundColor: Colors.orange,
-        onPressed: () => {},
+        onPressed: () => {Navigator.pushNamed(context, "/novoLugar")},
       ),
       body: SafeArea(
         child: ListView.builder(
@@ -37,12 +37,15 @@ class Lista extends StatelessWidget {
                   margin: EdgeInsets.all(16),
                   child: ListTile(
                     leading: CircleAvatar(
-                      child: Text(dummyList[index]['id'].toString()),
+                      child: Text(lista[index]['id'].toString()),
                       backgroundColor: Colors.indigo,
                     ),
-                    title: Text(dummyList[index]["title"]),
-                    subtitle: Text(dummyList[index]['subtitle']),
-                    trailing: Icon(Icons.add_a_photo),
+                    title: Text(lista[index]["title"]),
+                    subtitle: Text(lista[index]['subtitle']),
+                    trailing: Icon(
+                      Icons.airplane_ticket_outlined,
+                      color: Colors.orange,
+                    ),
                   ),
                 )),
       ),

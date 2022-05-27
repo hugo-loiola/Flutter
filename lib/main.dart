@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hugostoso/screens/novoLugar.dart';
 import './screens/login.dart';
 import './screens/cadastro.dart';
 import '/screens/lista.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => Login(),
         '/home': (context) => Lista(),
         '/cadastro': (context) => Cadastro(),
+        '/novoLugar': (context) => NovoLugar()
       },
     );
   }
