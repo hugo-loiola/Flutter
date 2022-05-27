@@ -5,11 +5,7 @@ class Lista extends StatelessWidget {
   Lista({Key? key}) : super(key: key);
 
   final List lista = List.generate(100, (index) {
-    return {
-      "id": index,
-      "title": "Lugar de número: $index",
-      "subtitle": "Esse lugar blablabla $index"
-    };
+    return {"id": index, "title": "Lugar", "subtitle": "Esse lugar blablabla"};
   });
 
   @override
