@@ -8,12 +8,12 @@ class Cadastro extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:
-            IconButton(icon: const Icon(Icons.arrow_back), onPressed: () => {}),
+        centerTitle: true,
+        backgroundColor: Colors.orange,
         title: const Text('Novo Cadastro'),
         actions: [
           TextButton(
-              onPressed: () => {},
+              onPressed: () => {Navigator.pushReplacementNamed(context, "/")},
               child: const Text(
                 'Salvar',
                 style: TextStyle(color: Colors.white),
@@ -23,25 +23,85 @@ class Cadastro extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          TextField(
-            keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-                border: UnderlineInputBorder(), label: Text('Email')),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: TextField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.account_circle_outlined,
+                    color: Colors.white,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.orange),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange, width: 1),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  label: Text("Email"),
+                  labelStyle: TextStyle(color: Colors.orange)),
+            ),
           ),
-          TextField(
-            keyboardType: TextInputType.phone,
-            decoration: InputDecoration(
-                border: UnderlineInputBorder(), label: Text('Telefone')),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: TextField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.phone, color: Colors.white),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange, width: 1),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  label: Text("Telefone"),
+                  labelStyle: TextStyle(color: Colors.orange)),
+            ),
           ),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-                border: UnderlineInputBorder(), label: Text('Senha')),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: TextField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              obscureText: true,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Colors.white,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange, width: 1),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  label: Text("Senha"),
+                  labelStyle: TextStyle(color: Colors.orange)),
+            ),
           ),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-                border: UnderlineInputBorder(), label: Text('Confirmar Senha')),
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: TextField(
+              style: TextStyle(color: Colors.white),
+              cursorColor: Colors.white,
+              obscureText: true,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.lock_outline_rounded,
+                    color: Colors.white,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.orange, width: 1),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
+                  label: Text("Repita a Senha"),
+                  labelStyle: TextStyle(color: Colors.orange)),
+            ),
           ),
         ],
       ),

@@ -8,13 +8,17 @@ class Lista extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.orange,
         title: const Text('Bússola'),
         actions: [
-          IconButton(icon: const Icon(Icons.exit_to_app), onPressed: () => {}),
+          IconButton(
+              icon: const Icon(Icons.exit_to_app),
+              onPressed: () => {Navigator.pushReplacementNamed(context, "/")}),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add, color: Colors.orange),
         onPressed: () => {},
       ),
       body: ListView.builder(
