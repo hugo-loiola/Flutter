@@ -13,7 +13,8 @@ class Cadastro extends StatelessWidget {
         title: const Text('Novo Cadastro'),
         actions: [
           TextButton(
-              onPressed: () => {Navigator.pushReplacementNamed(context, "/")},
+              onPressed: () =>
+                  {Navigator.pushReplacementNamed(context, "/home")},
               child: const Text(
                 'Salvar',
                 style: TextStyle(color: Colors.white),
