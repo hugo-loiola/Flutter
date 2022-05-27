@@ -5,9 +5,19 @@ class NovoLugar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Novo Lugar'),
+        title: const Text('Novo Lugar'),
         backgroundColor: Colors.indigo,
         centerTitle: true,
+        actions: [
+          TextButton(
+              onPressed: () => {Navigator.pop(context)},
+              child: const Text(
+                'Adicionar',
+                style: TextStyle(
+                  color: Colors.orange,
+                ),
+              ))
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -17,6 +27,10 @@ class NovoLugar extends StatelessWidget {
             child: TextField(
               cursorColor: Colors.white,
               decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.place_outlined,
+                    color: Colors.white,
+                  ),
                   label: Text("Lugar"),
                   labelStyle: TextStyle(color: Colors.orange),
                   focusedBorder: OutlineInputBorder(
@@ -34,6 +48,10 @@ class NovoLugar extends StatelessWidget {
             child: TextField(
               cursorColor: Colors.white,
               decoration: InputDecoration(
+                  prefixIcon: Icon(
+                    Icons.description_outlined,
+                    color: Colors.white,
+                  ),
                   label: Text("Descrição"),
                   labelStyle: TextStyle(color: Colors.orange),
                   focusedBorder: OutlineInputBorder(
